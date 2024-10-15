@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<video id="vod" autoplay="" muted="" width="1080" height="720"></video>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+<script>
+  if (Hls.isSupported()) {
+    var video = document.getElementById('vod');
+    var hls = new Hls();
+    hls.loadSource('https://cdn.jwplayer.com/manifests/2KLKobWI.m3u8?exp=1729032600&sig=2626f7e91aa99b645e7162bd24629f8f');
+    hls.attachMedia(video);
+  }
+</script>
+</body>
+</html>
